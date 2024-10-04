@@ -2,39 +2,191 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="sans-serif-light"
-        android:text="Happy birthday, Sam!"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="@color/black"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.095"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:padding="10dp"
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:fontFamily="sans-serif-light"
-        android:text="FromEmma."
-        android:textColor="#000000"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+            android:background="#E1E1E1"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_pheptinh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint=""
+                android:text="0"
+                android:padding="10dp"
+                android:lines="2"
+                android:maxLines="2"
+                android:gravity="end|top"
+                android:singleLine="true"
+                android:textAlignment="textEnd"
+                android:textSize="40sp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/tv_ketqua"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint=""
+
+                android:gravity="end|center"
+                android:padding="10dp"
+                android:lines="2"
+                android:maxLines="2"
+                android:singleLine="true"
+                android:textAlignment="textEnd"
+                android:textSize="40sp"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:paddingHorizontal="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frameLayout">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btn_ce"
+                    android:layout_weight="1"
+                    android:text="CE" />
+
+                <Button
+                    android:id="@+id/btn_c"
+                    android:layout_weight="1"
+                    android:text="C" />
+
+                <Button
+                    android:id="@+id/btn_bs"
+                    android:layout_weight="1"
+                    android:text="BS" />
+
+                <Button
+                    android:id="@+id/btn_chia"
+                    android:layout_weight="1"
+                    android:text="/" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <Button
+                    android:id="@+id/btn_7"
+                    android:layout_weight="1"
+                    android:text="7" />
+
+                <Button
+                    android:id="@+id/btn_8"
+                    android:layout_weight="1"
+                    android:text="8" />
+
+                <Button
+                    android:id="@+id/btn_9"
+                    android:layout_weight="1"
+                    android:text="9" />
+
+                <Button
+                    android:id="@+id/btn_nhan"
+                    android:layout_weight="1"
+                    android:text="X" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <Button
+                    android:id="@+id/btn_4"
+                    android:layout_weight="1"
+                    android:text="4" />
+
+                <Button
+                    android:id="@+id/btn_5"
+                    android:layout_weight="1"
+                    android:text="5" />
+
+                <Button
+                    android:id="@+id/btn_6"
+                    android:layout_weight="1"
+                    android:text="6" />
+
+                <Button
+                    android:id="@+id/btn_tru"
+                    android:layout_weight="1"
+                    android:text="-" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <Button
+                    android:id="@+id/btn_1"
+                    android:layout_weight="1"
+                    android:text="1" />
+
+                <Button
+                    android:id="@+id/btn_2"
+                    android:layout_weight="1"
+                    android:text="2" />
+
+                <Button
+                    android:id="@+id/btn_3"
+                    android:layout_weight="1"
+                    android:text="3" />
+
+                <Button
+                    android:id="@+id/btn_cong"
+                    android:layout_weight="1"
+                    android:text="+" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <Button
+                    android:id="@+id/btn_so_am"
+                    android:layout_weight="1"
+                    android:text="+/-" />
+
+                <Button
+                    android:id="@+id/btn_0"
+                    android:layout_weight="1"
+                    android:text="0" />
+
+                <Button
+                    android:id="@+id/btn_cham"
+                    android:layout_weight="1"
+                    android:text="." />
+
+                <Button
+                    android:id="@+id/btn_tinh"
+                    android:layout_weight="1"
+                    android:text="=" />
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
